@@ -13,9 +13,13 @@
 		B68D3EF11E82C9DC005F3416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68D3EEF1E82C9DC005F3416 /* Main.storyboard */; };
 		B68D3EF31E82C9DC005F3416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B68D3EF21E82C9DC005F3416 /* Assets.xcassets */; };
 		B68D3EF61E82C9DC005F3416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68D3EF41E82C9DC005F3416 /* LaunchScreen.storyboard */; };
+		C26AF1AC58381C89A1A7E796 /* libPods-IFSPMovieRecommneder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E21DCBDE3AD19105A1617BB /* libPods-IFSPMovieRecommneder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29EC40F1A0F5501E29FBA8DA /* Pods-IFSPMovieRecommneder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFSPMovieRecommneder.release.xcconfig"; path = "Pods/Target Support Files/Pods-IFSPMovieRecommneder/Pods-IFSPMovieRecommneder.release.xcconfig"; sourceTree = "<group>"; };
+		9E21DCBDE3AD19105A1617BB /* libPods-IFSPMovieRecommneder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IFSPMovieRecommneder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B26DF0D89E6A646B7832B6 /* Pods-IFSPMovieRecommneder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFSPMovieRecommneder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IFSPMovieRecommneder/Pods-IFSPMovieRecommneder.debug.xcconfig"; sourceTree = "<group>"; };
 		B68D3EE31E82C9DC005F3416 /* IFSPMovieRecommneder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFSPMovieRecommneder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68D3EE71E82C9DC005F3416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B68D3EE91E82C9DC005F3416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26AF1AC58381C89A1A7E796 /* libPods-IFSPMovieRecommneder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0587BC875531CBDD06EFFEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6B26DF0D89E6A646B7832B6 /* Pods-IFSPMovieRecommneder.debug.xcconfig */,
+				29EC40F1A0F5501E29FBA8DA /* Pods-IFSPMovieRecommneder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B68D3EDA1E82C9DC005F3416 = {
 			isa = PBXGroup;
 			children = (
 				B68D3EE51E82C9DC005F3416 /* IFSPMovieRecommneder */,
 				B68D3EE41E82C9DC005F3416 /* Products */,
+				B0587BC875531CBDD06EFFEF /* Pods */,
+				BBADAEC8939E4E24CAFD1D96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BBADAEC8939E4E24CAFD1D96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E21DCBDE3AD19105A1617BB /* libPods-IFSPMovieRecommneder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B68D3EFA1E82C9DC005F3416 /* Build configuration list for PBXNativeTarget "IFSPMovieRecommneder" */;
 			buildPhases = (
+				668888A93850D6F2998C5A8B /* [CP] Check Pods Manifest.lock */,
 				B68D3EDF1E82C9DC005F3416 /* Sources */,
 				B68D3EE01E82C9DC005F3416 /* Frameworks */,
 				B68D3EE11E82C9DC005F3416 /* Resources */,
+				E8ED934C81CDF1FE0072BCA6 /* [CP] Embed Pods Frameworks */,
+				A4CFB3EB8313EB5F2FB8DE4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		668888A93850D6F2998C5A8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A4CFB3EB8313EB5F2FB8DE4E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IFSPMovieRecommneder/Pods-IFSPMovieRecommneder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8ED934C81CDF1FE0072BCA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IFSPMovieRecommneder/Pods-IFSPMovieRecommneder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B68D3EDF1E82C9DC005F3416 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		B68D3EFB1E82C9DC005F3416 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B26DF0D89E6A646B7832B6 /* Pods-IFSPMovieRecommneder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 745V2GUZMT;
@@ -283,6 +359,7 @@
 		};
 		B68D3EFC1E82C9DC005F3416 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29EC40F1A0F5501E29FBA8DA /* Pods-IFSPMovieRecommneder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 745V2GUZMT;
